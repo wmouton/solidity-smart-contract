@@ -4,7 +4,11 @@ contract LToken {
     address public minter;
     mapping(address => uint) public balances;
 
-    constructor() {}
+    event Sent(address from, address to, uint amount);
+
+    constructor() {
+        minter = msg.sender;
+    }
 
     function mint(){}
 
