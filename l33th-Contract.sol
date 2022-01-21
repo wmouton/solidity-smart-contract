@@ -10,7 +10,10 @@ contract LToken {
         minter = msg.sender;
     }
 
-    function mint(address receiver, uint amount) public {}
+    function mint(address receiver, uint amount) public {
+        require(msg.sender == minter);
+        balances[receiver] += amount;
+    }
 
     function send(address receiver, uint amount) public {}
 }
