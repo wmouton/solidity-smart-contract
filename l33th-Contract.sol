@@ -10,7 +10,7 @@ contract LToken {
         minter = msg.sender;
     }
 
-    function mint(){}
+    function mint(address receiver, uint amount) public {}
 
-    function send(){}
+    function send(address receiver, uint amount) public {}
 }
